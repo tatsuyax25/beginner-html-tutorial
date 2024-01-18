@@ -8,3 +8,12 @@ myImage.onclick = () => {
     myImage.setAttribute('src', 'images/firefox2.png');
   }
 }
+
+let myButton = document.querySelector("button");
+let myHeading = document.querySelector("h1");
+
+function setUserName() {
+  const myName = prompt("Please enter you name.");
+  localStorage.setItem("name", myName);
+  myHeading.textContent = `Mozilla is cool, ${myName}`;
+}
